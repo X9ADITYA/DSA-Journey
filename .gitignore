@@ -1,0 +1,44 @@
+
+# Compiled C/C++ executables
+*.exe
+*.out
+*.o
+*.obj
+*.dll
+*.so
+*.a
+*.lib
+
+# Debug and build files
+*.pdb
+*.ilk
+*.pch
+*.gch
+build/
+bin/
+obj/
+Debug/
+Release/
+
+# VS Code workspace settings
+.vscode/
+
+# Visual Studio files
+.vs/
+
+# IDE files
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary and backup files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Logs
+*.log
