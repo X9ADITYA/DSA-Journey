@@ -1,87 +1,40 @@
-#include<iostream>
+
+#include <iostream>
 using namespace std;
-# define SIZE 5
-
-
-
-int stack[SIZE];
-
-int top = -1;
-
-
-void push(int value){
-	if(top == SIZE-1){
-		cout<<"stack is overflow";
-	}
-	else {
-		top++;
-		stack[top]= value;
-	}
-}
-
-void pop(){
-	if(top==-1){
-		cout<<"stack underflow";
-	}
-	else{
-		cout<<"popped element"<<stack[top];
-		top--;
-	}
-}
-
-
-void display(){
-	if(top==-1){
-		cout<<"stack is empty";
-		
-	}
-	else {
-		cout<<"stack element";
-		for (int i = top; i>= 0 ; i--){
-			cout<<stack[i]<<endl;
-		}
-	}
-}
-
 
 int main()
 {
-    int choice, value;
+    int poly[10], degree;
 
-    do
+    cout << "Enter degree: ";
+    cin >> degree;
+
+    cout << "Enter coefficients from x^0 to x^degree:\n";
+
+    for (int i = 0; i <= degree; i++)
     {
-        cout << "\n--- STACK MENU ---\n";
-        cout << "1. PUSH\n";
-        cout << "2. POP\n";
-        cout << "3. DISPLAY\n";
-        cout << "4. EXIT\n";
-        cout << "Enter your choice: ";
-        cin >> choice;
+        cin >> poly[i];
+    }
 
-        if (choice == 1)
-        {
-            cout << "Enter value: ";
-            cin >> value;
-            push(value);
-        }
-        else if (choice == 2)
-        {
-            pop();
-        }
-        else if (choice == 3)
-        {
-            display();
-        }
-        else if (choice == 4)
-        {
-            cout << "Exiting program.\n";
-        }
-        else
-        {
-            cout << "Invalid choice!\n";
-        }
+    cout << "Polynomial: ";
 
-    } while (choice != 4);
+    for (int i = degree; i >= 0; i--)
+    {
+        if (poly[i] != 0)
+        {
+            cout << poly[i];
+
+            if (i > 0)
+                cout << "x";
+
+            if (i > 1)
+                cout << "^" << i;
+
+            if (i > 0)
+                cout << " + ";
+        }
+    }
 
     return 0;
 }
+
