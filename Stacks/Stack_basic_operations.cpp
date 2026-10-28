@@ -7,7 +7,7 @@ using namespace std;
 int stack[SIZE];
 int top = -1;
 
-// Insert an element into the stack
+
 void push(int value) {
     if (top == SIZE - 1) {
         cout << "Stack Overflow! Stack is full.\n";
@@ -18,7 +18,7 @@ void push(int value) {
     }
 }
 
-// Remove the top element from the stack
+
 void pop() {
     if (top == -1) {
         cout << "Stack Underflow! Stack is empty.\n";
@@ -28,7 +28,7 @@ void pop() {
     }
 }
 
-// Display all elements of the stack
+
 void display() {
     if (top == -1) {
         cout << "Stack is empty.\n";
