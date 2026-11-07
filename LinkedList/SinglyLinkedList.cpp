@@ -41,6 +41,7 @@ int main(){
     }
 
     cout << "NULL" << endl;
+	cout<<"singlylinkedlist";
 
     return 0;
 }
